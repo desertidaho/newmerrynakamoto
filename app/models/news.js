@@ -23,19 +23,18 @@ export default class News {
 
   newsTemplate() {
     let template = ""
-    for (let i = 0; i < 48; i++) {
+    for (let i = 0; i < 4; i++) {
       template += `
       <div class="col-xl-3 col-md-6 mb-4">
         <a href="${[this.newsArray[i].url]}" target="">
           <div class="card border-left-primary shadow h-100 py-2">
-            <div class="card-body">
+            <div class="card-body align-bottom">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
                   <div class="h6 font-weight-bold text-gray-700 text-uppercase mb-3">${this.newsArray[i].title}</div>
                   <div class="p mb-0 font-weight-bold text-blue-800">[${this.newsArray[i].source}]</div>
                 </div>
               </div>
-              <img class="card-img-bottom mt-3" src="${this.newsArray[i].img}" alt="Card image" style="height: auto;">
             </div>
           </div>
         </a>  
