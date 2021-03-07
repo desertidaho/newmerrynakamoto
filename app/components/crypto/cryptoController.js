@@ -26,9 +26,9 @@ function drawHashrate() {
 export default class CryptoController {
   constructor() {
     _cs.addSubscriber('crypto', drawCrypto)
-    _cs.addSubscriber('marketCap', drawMarketCap)
-    _cs.addSubscriber('blockCypher', drawBlockCypher)
-    _cs.addSubscriber('hashrate', drawHashrate)
+    // _cs.addSubscriber('marketCap', drawMarketCap)
+    // _cs.addSubscriber('blockCypher', drawBlockCypher)
+    // _cs.addSubscriber('hashrate', drawHashrate)
     // _cs.getBlockCypher()
     // _cs.getHashrate()
     _cs.getCrypto()

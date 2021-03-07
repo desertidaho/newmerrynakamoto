@@ -19,7 +19,6 @@ export default class Crypto {
     let x = 10
     let page = window.location.href
     if (page.includes("/prices")) {
-      console.log('Bingo prices')
       x = 100
     }
     let template = ""
@@ -38,12 +37,6 @@ export default class Crypto {
      `
     }
     return template
-  }
-
-  btcTemplate() {
-    return `
-      Crypto News  (BTC ${this.price0})
-          `
   }
 
 }
