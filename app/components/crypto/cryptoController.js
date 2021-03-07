@@ -4,7 +4,7 @@ const _cs = new CryptoService()
 
 function drawCrypto() {
   let template = _cs.Crypto.cryptoTemplate()
-  document.querySelector('#marquee').innerHTML = template
+  document.querySelector('#prices-tables').innerHTML = template
 }
 
 function drawMarketCap() {
@@ -29,10 +29,10 @@ export default class CryptoController {
     _cs.addSubscriber('marketCap', drawMarketCap)
     _cs.addSubscriber('blockCypher', drawBlockCypher)
     _cs.addSubscriber('hashrate', drawHashrate)
-    _cs.getBlockCypher()
-    _cs.getHashrate()
+    // _cs.getBlockCypher()
+    // _cs.getHashrate()
     _cs.getCrypto()
-    _cs.getMarketCap()
+    // _cs.getMarketCap()
     _cs.refresh()
   }
 

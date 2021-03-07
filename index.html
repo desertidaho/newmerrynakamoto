@@ -82,29 +82,6 @@
 
                     <i class="fab fa-bitcoin fa-2x mr-2 text-warning"></i><div class="h5 mt-2" style="color: black;">merry Nakamoto</div>
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"></span>
-                                <img class="img-profile rounded-circle"
-                                    src="img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
                 </nav>
                 <!-- End of Topbar -->
 
@@ -121,8 +98,56 @@
                         <!-- Insert news cards here -->
                     </div>
 
-                    <!-- Content Row -->
+                    <!-- Begin Prices Page Content -->
+                    <div class="container-fluid">
 
+                        <!-- Cryptocurrency Prices Table -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Cryptocurrency Prices</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Coin</th>
+                                                <th>Price</th>
+                                                <th>Market Cap</th>
+                                                <th>Volume 24hr</th>
+                                                <th>% 24hr</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Rank</th>
+                                                <th>Coin</th>
+                                                <th>Price</th>
+                                                <th>Market Cap</th>
+                                                <th>Volume 24hr</th>
+                                                <th>% 24hr</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody id="prices-tables">
+                                            <!-- insert crypto prices here  -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.container-fluid -->
+
+
+
+
+
+
+
+
+                    <!-- Content Row -->
                     <div class="row">
 
                         <!-- Area Chart -->
