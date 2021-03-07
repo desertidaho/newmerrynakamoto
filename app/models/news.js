@@ -36,7 +36,7 @@ export default class News {
             <div class="card-body align-bottom">
               <div class="row no-gutters align-items-center">
                 <div class="col mr-2">
-                  <div class="h6 font-weight-bold text-gray-700 text-uppercase mb-3">${this.newsArray[i].title}</div>
+                  <div class="h6 font-weight-bold text-gray-700 mb-3">${this.newsArray[i].title}</div>
                   <div class="p mb-0 font-weight-bold text-blue-800">[${this.newsArray[i].source}]</div>
                 </div>
               </div>
