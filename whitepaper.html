@@ -44,7 +44,7 @@
             </li>
 
             <!-- Nav Item - News -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="news.html">
                     <span>News</span></a>
             </li>
@@ -56,7 +56,7 @@
             </li>
 
             <!-- Nav Item - Whitepaper -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="whitepaper.html">
                     <span>Whitepaper</span></a>
             </li>
@@ -91,22 +91,30 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
+                <!-- Begin Bitcoin Whitepaper content -->
                 <div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <div class="h6 mb-0 font-weight-bold text-primary">Cryptocurrency News</div>
+                    <!-- Bitcoin Whitepaper -->
+                    <div class="card shadow">
+                        <!-- Card Header - Dropdown -->
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Bitcoin Whitepaper</h6>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body" style="min-height: 1100px;">
+                            <div class="chart-area">
+                                <!-- pdf viewer -->
+                                <section class="content-section bg-light pl-0 pr-0" id="viewer">
+                                    <div class="container text-center pl-0 pr-0">
+                                        <!--pdf viewer-->
+                                        <div class="col h-100 pl-0 pr-0" id="pdf">
+                                          <iframe class="ipdf shadow" src="/bitcoin.pdf" height="1090px" width="100%"></iframe>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Content Row -->
-                    <div class="row" id="news-cards">
-                        <!-- Insert news cards here -->
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
 
                 </div>
                 <!-- /.container-fluid -->
