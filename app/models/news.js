@@ -22,8 +22,13 @@ export default class News {
   }
 
   newsTemplate() {
+    let x = 4
+    let page = window.location.href
+    if (page.includes("/news")) {
+      x = 48
+    }
     let template = ""
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < x; i++) {
       template += `
       <div class="col-xl-3 col-md-6 mb-4">
         <a href="${[this.newsArray[i].url]}" target="">
