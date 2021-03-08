@@ -10,10 +10,7 @@ async function drawNews() {
 //Public
 export default class NewsController {
   constructor() {
-    let page = window.location.href
-    if (page.includes("/index") | page.includes("/news") | page == "https://merrynakamoto.com/") {
-      _ns.addSubscriber('news', drawNews)
-    }
+    _ns.addSubscriber('news', drawNews)
     _ns.getNews()
     _ns.refreshNews()
   }
