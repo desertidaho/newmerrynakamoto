@@ -24,7 +24,7 @@ export default class CryptoController {
     if (page.includes("/index") | page.includes("/prices") | page == "https://merrynakamoto.com/") {
       _cs.addSubscriber('crypto', drawCrypto)
     }
-    if (page.includes("/index")) {
+    if (page.includes("/index") | page == "https://merrynakamoto.com/") {
       _cs.addSubscriber('network', drawNetwork)
       _cs.addSubscriber('glossary', drawGlossary)
     }
