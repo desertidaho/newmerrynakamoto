@@ -30,7 +30,7 @@ export default class Network {
   }
 
   networkTemplate() {
-    this.hashrate = this.hashrate.slice(0, 3) + '.' + this.hashrate.slice(4, 6) + ' EH/s'
+    this.hashrate = this.hashrate.slice(0, 3) + '.' + this.hashrate.slice(4, 6) + 'EH/s'
     return `
             <a href="https://www.sochain.com" target="_blank" class="blockData"><p>Bitcoin Price $${this.price}</p></a>
             <a href="https://www.sochain.com" target="_blank" class="blockData"><p>Block Height ${this.blockHeight}</p></a>
