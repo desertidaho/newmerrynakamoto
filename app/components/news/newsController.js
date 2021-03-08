@@ -11,7 +11,7 @@ async function drawNews() {
 export default class NewsController {
   constructor() {
     let page = window.location.href
-    if (page.includes("/index") | page.includes("/news")) {
+    if (page.includes("/index") | page.includes("/news") | page == "https://merrynakamoto.com/") {
       _ns.addSubscriber('news', drawNews)
     }
     _ns.getNews()
