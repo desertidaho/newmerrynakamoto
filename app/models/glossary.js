@@ -8,7 +8,7 @@ export default class Glossary {
       for (let i = 0; i < this.glossaryArray.length; i++) {
         template += `
         <div class="col-lg-4 mb-4">
-            <div class="card bg-dark text-white shadow">
+            <div class="card bg-light text-dark shadow">
                 <div class="card-body pl-2 pr-2">
                     <h6>${this.glossaryArray[i].title}:</h6>
                     <p>${this.glossaryArray[i].definition}</p>
