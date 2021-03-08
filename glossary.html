@@ -17,6 +17,7 @@
         rel="stylesheet">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 </head>
 
 <body id="page-top">
@@ -41,7 +42,7 @@
             </li>
 
             <!-- Nav Item - News -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="news.html">
                     <span>Cryptocurrency News</span></a>
             </li>
@@ -70,8 +71,8 @@
                     <span>Resources</span></a>
             </li>
 
-            <!-- Nav Item - Glossary Data -->
-            <li class="nav-item">
+              <!-- Nav Item - Glossary Data -->
+              <li class="nav-item active">
                 <a class="nav-link" href="glossary.html">
                     <span>Glossary</span></a>
             </li>
@@ -89,43 +90,27 @@
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
             <!-- Main Content -->
             <div id="content">
-
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
                     </button>
-
                     <i class="fab fa-bitcoin fa-2x mr-2 text-warning"></i><div class="h5 mt-2" style="color: black;">merry Nakamoto</div>
-
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <div class="h6 mb-0 font-weight-bold text-primary">Cryptocurrency News</div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row" id="news-cards">
-                        <!-- Insert news cards here -->
-                    </div>
-
-                    <!-- Content Row -->
-
-                    <div class="row">
-
+                <!-- Begin Glossary Content -->
+                <div class="container pl-0 pr-0">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Glossary</h6>
+                        </div>
+                    <div class="row ml-2 mr-2 mt-3" id="glossary" data-masonry='{"percentPosition": true }'>
+                    <!-- insert glossary data here  -->
                 </div>
-                <!-- /.container-fluid -->
-
             </div>
             <!-- End of Main Content -->
 
@@ -174,6 +159,7 @@
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
