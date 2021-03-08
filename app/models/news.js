@@ -9,14 +9,6 @@ export default class News {
         sourceUrl: data[i].source,
         img: data[i].imageurl
       })
-
-      this.sources = ''
-      if (this.sources.includes(data[i].source_info.name)) {
-        continue
-      }
-      else {
-        this.sources += (data[i].source_info.name) + ' | '
-      }
     }
 
   }
@@ -45,56 +37,6 @@ export default class News {
         </a>  
       </div>     
       `
-    }
-    return template
-  }
-
-  sourcesTemplate() {
-    let template = ""
-    for (let i = 0; i <= this.newsArray.length - 1; i++) {
-      if (template.includes(this.newsArray[i].source)) {
-        continue
-      }
-      else if (this.newsArray[i].source == "Decrypt") {
-        template +=
-          `
-        <a href="https://${[this.newsArray[i].sourceUrl]}.co" target="" style="text-decoration:none;">
-          <span class="mr-3">${this.newsArray[i].source}</span>
-        </a>
-      `
-      }
-      else if (this.newsArray[i].source == "TheBlock") {
-        template +=
-          `
-        <a href="https://${[this.newsArray[i].sourceUrl]}crypto.com" target="" style="text-decoration:none;">
-          <span class="mr-3">${this.newsArray[i].source}</span>
-        </a>
-      `
-      }
-      else if (this.newsArray[i].source == "Bitcoin.com") {
-        template +=
-          `
-        <a href="https://news.${[this.newsArray[i].sourceUrl]}" target="" style="text-decoration:none;">
-          <span class="mr-3">${this.newsArray[i].source}</span>
-        </a>
-      `
-      }
-      else if (this.newsArray[i].source == "Chaindd") {
-        template +=
-          `
-        <a href="https://english.${[this.newsArray[i].sourceUrl]}.com" target="" style="text-decoration:none;">
-          <span class="mr-3">${this.newsArray[i].source}</span>
-        </a>
-      `
-      }
-      else {
-        template +=
-          `
-        <a href="https://${[this.newsArray[i].sourceUrl]}.com" target="" style="text-decoration:none;">
-          <span class="mr-3">${this.newsArray[i].source}</span>
-        </a>
-      `
-      }
     }
     return template
   }

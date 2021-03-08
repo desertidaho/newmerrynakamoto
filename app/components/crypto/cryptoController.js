@@ -19,9 +19,14 @@ function drawGlossary() {
 
 export default class CryptoController {
   constructor() {
-    _cs.addSubscriber('crypto', drawCrypto)
-    _cs.addSubscriber('network', drawNetwork)
-    _cs.addSubscriber('glossary', drawGlossary)
+    let page = window.location.href
+    if (page.includes("/index") | page.includes("/prices")) {
+      _cs.addSubscriber('crypto', drawCrypto)
+    }
+    if (page.includes("/index")) {
+      _cs.addSubscriber('network', drawNetwork)
+      _cs.addSubscriber('glossary', drawGlossary)
+    }
     _cs.getNetwork()
     _cs.getCrypto()
     _cs.refresh()
