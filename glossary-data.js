@@ -353,7 +353,7 @@ getGlossaryData() {
             { title: "Sat", definition: this.Sat },
             { title: "Satoshi", definition: this.Satoshi },
             { title: "Satoshi Nakamoto", definition: this.SatoshiNakamoto },
-            { title: "Silk Road", definition: this.Silk_Road },
+            { title: "Silk Road", definition: this.SilkRoad },
             { title: "SHA-256", definition: this.SHA256 },
             { title: "Signature", definition: this.Signature },
             { title: "Transaction Fee", definition: this.TransactionFee },
