@@ -6,8 +6,7 @@ physical address or an email. It is the only
 information you need to provide for
 someone to pay you with Bitcoin. An
 important difference, however, is that each
-address should only be used for a single
-transaction. Typically consists of between
+address consists of between
 26 and 35 alphanumeric characters.`
 
 Altcoin = ` A form of cryptocurrency that
@@ -35,19 +34,13 @@ Internet connection via a modem or
 wireless mode. Bitcoin is independent of
 your desktop computer.`
 
-Bit = ` Bit is a common unit used to
-designate a sub-unit of a bitcoin - 1,000,000
-bits is equal to 1 bitcoin (BTC or ). This
-unit is usually more convenient for pricing,
-tips, goods and services.`
-
 Bitcoin = `A form of
 digital currency created in 2009, that is
 created and distributed on a peer-to-peer
 basis. It has no central bank - transactions
 are conducted directly between
 individuals. Bitcoin is the most popular
-kind of cryptocurrency.`
+cryptocurrency.`
 
 BitcoinIndex = ` The live bitcoin news
 bitcoin index is a weighted average index
@@ -58,12 +51,7 @@ JPY, GBP and AUD.`
 
 BitcoinWhitepaper = ` Written by Satoshi
 Nakamoto in 2008, it describes the
-original plan and protocol for Bitcoin.
-BitPay - BitPay is a payment processing
-company and software that allows
-merchants such as eBay, Amazon and other
-online shopping channels to accept bitcoin
-as payment for its goods and services.`
+original plan and protocol for Bitcoin.`
 
 BitPay = ` BitPay is a payment processing
 company and software that allows
@@ -267,6 +255,12 @@ When hashed with a corresponding string
 known as a private key it digitally signs
 and online communication.`
 
+Sat = ` Sat is a common unit used to
+designate a sub-unit of a Bitcoin - 1,000,000
+sats is equal to 1 Bitcoin. This
+unit is usually more convenient for pricing,
+tips, goods and services.`
+
 Satoshi = ` A Bitcoin “cent”, the smallest
 form of Bitcoins. One Bitcoin is equal to 1
 million Satoshis.`
@@ -329,19 +323,10 @@ getGlossaryData() {
             { title: "Altcoin", definition: this.Altcoin },
             { title: "ASIC", definition: this.ASIC },
             { title: "ASIC Miner", definition: this.ASICMiner },
-            { title: "Bit", definition: this.Bit },
             { title: "Bitcoin", definition: this.Bitcoin },
             { title: "Bitcoin Index", definition: this.BitcoinIndex },
             { title: "Bitcoin Whitepaper", definition: this.BitcoinWhitepaper },
             { title: "Bit Pay", definition: this.BitPay },
-            { title: "Altcoin", definition: this.Altcoin },
-            { title: "ASIC", definition: this.ASIC },
-            { title: "ASIC Miner", definition: this.ASICMiner },
-            { title: "Bit", definition: this.Bit },
-            { title: "Bitcoin", definition: this.Bitcoin },
-            { title: "Bitcoin Index", definition: this.BitcoinIndex },
-            { title: "Bitcoin Whitepaper", definition: this.BitcoinWhitepaper },
-            { title: "BitPay", definition: this.BitPay },
             { title: "Block", definition: this.Block },
             { title: "Block Reward", definition: this.BlockReward },
             { title: "Blockchain", definition: this.Blockchain },
@@ -365,6 +350,7 @@ getGlossaryData() {
             { title: "Private Key", definition: this.PrivateKey },
             { title: "Proof of Work (PoW)", definition: this.ProofofWorkPoW },
             { title: "Public Key", definition: this.PublicKey },
+            { title: "Sat", definition: this.Sat },
             { title: "Satoshi", definition: this.Satoshi },
             { title: "Satoshi Nakamoto", definition: this.SatoshiNakamoto },
             { title: "Silk Road", definition: this.Silk_Road },
