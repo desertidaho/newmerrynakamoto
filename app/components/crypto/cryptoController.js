@@ -20,7 +20,8 @@ function drawGlossary() {
 export default class CryptoController {
   constructor() {
     let page = window.location.href
-    if (page.includes("/index") | page.includes("/prices")) {
+    console.log('page: ' + page)
+    if (page.includes("/index") | page.includes("/prices") | page == "https://merrynakamoto.com/") {
       _cs.addSubscriber('crypto', drawCrypto)
     }
     if (page.includes("/index")) {
