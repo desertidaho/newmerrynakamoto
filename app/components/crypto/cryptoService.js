@@ -1,5 +1,9 @@
 import Crypto from "../../models/crypto.js";
 import Network from "../../models/network.js";
+import Glossary from "../../models/glossary.js";
+import GlossaryData from "../../../glossary-data.js";
+
+const _gd = new GlossaryData()
 
 // @ts-ignore
 const _cryptoApi = axios.create({
@@ -16,12 +20,14 @@ const _networkApi = axios.create({
 
 let _state = {
   crypto: {},
-  network: {}
+  network: {},
+  glossary: {}
 }
 
 let _subscribers = {
   crypto: [],
-  network: []
+  network: [],
+  glossary: []
 }
 
 function _setState(prop, data) {
@@ -44,6 +50,10 @@ export default class CryptoService {
     return _state.network
   }
 
+  get Glossary() {
+    return _state.glossary
+  }
+
   getCrypto() {
     _cryptoApi.get()
       .then(res => {
@@ -61,6 +71,11 @@ export default class CryptoService {
       .then(res => {
         _setState('network', new Network(res.data.data))
       })
+  }
+
+  getGlossary() {
+    let data = _gd.getGlossaryData()
+    _setState('glossary', new Glossary(data))
   }
 
 }
