@@ -17,16 +17,16 @@ export default class Crypto {
       num = num.toString()
       // console.log('num:' + num, num.length)
       if (num.length == 17) {
-        num = num.slice(0, 2) + '.' + num.slice(2, 4) + 'T' //$10.00T
+        num = num.slice(0, 2) + '.' + num.slice(2, 4) + 'T' //$99.99T
       }
       else if (num.length == 16) {
-        num = num.slice(0, 1) + '.' + num.slice(1, 3) + 'T' //$1.00T
+        num = num.slice(0, 1) + '.' + num.slice(1, 3) + 'T' //$9.99T
       }
       else if (num.length == 15) {
         num = '$' + num.slice(0, 3) + '.' + num.slice(3, 5) + 'B' //$999.99B
       }
       else if (num.length == 14) {
-        num = '$' + num.slice(0, 2) + '.' + num.slice(2, 5) + 'B' //$99.99B
+        num = '$' + num.slice(0, 2) + '.' + num.slice(2, 4) + 'B' //$99.99B
       }
       else if (num.length == 13) {
         num = '$' + num.slice(0, 1) + '.' + num.slice(1, 3) + 'B' //$9.99B
@@ -35,7 +35,7 @@ export default class Crypto {
         num = '$' + num.slice(0, 3) + '.' + num.slice(3, 5) + 'M' //$999.99M
       }
       else if (num.length == 11) {
-        num = '$' + num.slice(0, 2) + '.' + num.slice(2, 5) + 'M' //$99.99M
+        num = '$' + num.slice(0, 2) + '.' + num.slice(2, 4) + 'M' //$99.99M
       }
       else if (num.length == 10) {
         num = '$' + num.slice(0, 1) + '.' + num.slice(1, 3) + 'M' //$9.99M
