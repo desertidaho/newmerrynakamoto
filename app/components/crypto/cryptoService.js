@@ -13,7 +13,7 @@ const _cryptoApi = axios.create({
 
 // @ts-ignore
 const _networkApi = axios.create({
-  baseURL: 'https://sochain.com/api/v2/get_info/BTC',
+  baseURL: 'https://chain.so/api/v2/get_info/BTC',
   timeout: 15000
 });
 
