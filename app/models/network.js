@@ -32,14 +32,13 @@ export default class Network {
   networkTemplate() {
     this.hashrate = this.hashrate.slice(0, 3) + '.' + this.hashrate.slice(4, 6) + 'EH/s'
     return `
-            <a href="https://chain.so/" target="_blank" class="blockData"><p>Bitcoin Price $${this.price}</p></a>
+            <a href="https://chain.so/" target="_blank" class="blockData"><p id="tx_update"></p></a>
+            <a href="https://chain.so/" target="_blank" class="blockData"><p id="value_update"></p></a>
             <a href="https://chain.so/" target="_blank" class="blockData"><p>Block Height ${this.blockHeight}</p></a>
             <a href="https://www.sofi.com/learn/content/bitcoin-hash-rate/" target="_blank" class="blockData"><p>Hashrate ${this.hashrate}</p></a>
             <a href="https://www.blockchain.com/charts/difficulty" target="_blank" class="blockData"><p>Mining Difficulty ${this.mining}</p></a>
             <a href="https://chain.so/" target="_blank" class="blockData"><p>Unconfirmed Transactions ${this.unconfirmed}</p></a>
             <a href="https://www.bitcoin.org" target="_blank" class="blockData"><p>Bitcoin Website</p></a>
-            <a href="https://www.blockchain.com/explorer" target="_blank" class="blockData"><p>Blockchain Explorer</p></a>
-            <a href="https://cryptowat.ch/charts/BINANCE:BTC-BUSD" target="_blank" class="blockData"><p>Cryptowatch</p></a>
             `
   }
 
