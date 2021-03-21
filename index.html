@@ -501,7 +501,7 @@
         ticker.bind('tx_update', function(data) {
             
             if (data.type == "tx") {
-                let txid = data.value.txid
+                let txid = data.value.txid.slice(0, 17) + '...'
                 let value = data.value.sent_value
                 // console.log(data)
                 document.querySelector('#tx_update').innerHTML = 'Latest TxId  ' + txid
