@@ -39,9 +39,9 @@ export default class Network {
             <a href="https://www.blockchain.com/charts/difficulty" target="_blank" class="blockData"><p>Mining Difficulty ${this.mining}</p></a>
             <a href="https://chain.so/" target="_blank" class="blockData"><p>Unconfirmed Transactions ${this.unconfirmed}</p></a>
             <a href="https://www.bitcoin.org" target="_blank" class="blockData"><p>Bitcoin Website</p></a>
-            <a href="https://www.blockchain.com/explorer" target="_blank" class="blockData"><p>Blockchain Explorer</p></a>
+            <a href="https://www.blockchain.com/explorer" target="_blank" class="blockData"><p>Bitcoin Explorer</p></a>
             `
   }
-
+ 
 
 }
