@@ -194,21 +194,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/2.1.6/pusher.min.js"></script>
 
     <script>
-        Pusher.host = 'slanger1.chain.so'; // our server
-        Pusher.ws_port = 443; // our server's port
-        Pusher.wss_port = 443; // ...
-
-        // create the pusher client connection
-        var pusher = new Pusher('e9f5cc20074501ca7395', { encrypted: true, disabledTransports: ['sockjs'], disableStats: true });
-
-        var ticker = pusher.subscribe('blockchain_update_btc');
-
+        Pusher.host = 'slanger1.chain.so';
+        Pusher.ws_port = 443;
+        Pusher.wss_port = 443;
+        let pusher = new Pusher('e9f5cc20074501ca7395', { encrypted: true, disabledTransports: ['sockjs'], disableStats: true });
+        let ticker = pusher.subscribe('blockchain_update_btc');
         ticker.bind('tx_update', function(data) {
-            
             if (data.type == "tx") {
                 let txid = data.value.txid.slice(0, 17) + '...'
                 let value = data.value.sent_value
-                // console.log(data)
                 document.querySelector('#tx_update').innerHTML = 'Latest TxId  ' + txid
                 document.querySelector('#value_update').innerHTML = 'BTC Sent  ' + value
             }
