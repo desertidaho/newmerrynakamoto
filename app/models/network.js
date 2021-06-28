@@ -1,6 +1,6 @@
 export default class Network {
   constructor(data) {
-    this.hashrate = data.hashrate,
+    this.hashrate = formatHashrate(data.hashrate),
     this.blockHeight = data.blocks,
     this.mining = formatNumber(data.mining_difficulty),
     this.unconfirmed = data.unconfirmed_txs,
@@ -8,20 +8,29 @@ export default class Network {
     this.symbol = data.symbol_htmlcode,
     this.timeSinceUpdate = data.price_update_time/1000
 
+    function formatHashrate(num) {
+      if (num.length > 22) {
+        num = num.slice(0, 3) + '.' + num.slice(4, 6) + ' EH/s'
+      }
+      else {
+        num = num.slice(0, 2) + '.' + num.slice(3, 5) + ' EH/s'
+      }
+      return num
+    }
+
     function formatNumber(num) {
       num = num.toString()
-      console.log('num:' + num, num.length)
       if (num.length == 18) {
-        num = '$' + num.slice(0, 3) + '.' + num.slice(3, 5) + 'T' //$100.00T
+        num = '$' + num.slice(0, 3) + '.' + num.slice(3, 5) + ' T' //$100.00T
       }
       else if (num.length == 17) {
-        num = num.slice(0, 2) + '.' + num.slice(2, 4) + 'T' //$10.00T
+        num = num.slice(0, 2) + '.' + num.slice(2, 4) + ' T' //$10.00T
       }
       else if (num.length == 16) {
-        num = num.slice(0, 1) + '.' + num.slice(1, 3) + 'T' //$1.00T
+        num = num.slice(0, 1) + '.' + num.slice(1, 3) + ' T' //$1.00T
       }
       else if (num.length == 15) {
-        num = '$' + num.slice(0, 3) + '.' + num.slice(3, 5) + 'B' //$100.00B
+        num = '$' + num.slice(0, 3) + '.' + num.slice(3, 5) + ' B' //$100.00B
       }
       else {}
     return num
@@ -30,7 +39,6 @@ export default class Network {
   }
 
   networkTemplate() {
-    this.hashrate = this.hashrate.slice(0, 3) + '.' + this.hashrate.slice(4, 6) + 'EH/s'
     return `
             <a href="https://chain.so/" target="_blank" class="blockData"><p id="tx_update"></p></a>
             <a href="https://chain.so/" target="_blank" class="blockData"><p id="value_update"></p></a>
