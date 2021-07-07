@@ -9,13 +9,14 @@ export default class Crypto {
         marketCap: formatNumber(Number(data[i].marketCapUsd).toFixed(2)),
         volume: formatNumber(Number(data[i].volumeUsd24Hr).toFixed(2)),
         percent: Number(data[i].changePercent24Hr).toFixed(2) + '%',
+        supply: formatNumber(Number(data[i].supply).toFixed(2)),
         explorerUrl: data[i].explorer
       })
     }
 
     function formatNumber(num) {
       num = num.toString()
-      // console.log('num:' + num, num.length)
+      //console.log('num:' + num, num.length)
       if (num.length == 17) {
         num = num.slice(0, 2) + '.' + num.slice(2, 4) + 'T' //$99.99T
       }
@@ -66,6 +67,7 @@ export default class Crypto {
         <td>${this.pricesArray[i].marketCap}</td>
         <td>${this.pricesArray[i].volume}</td>
         <td>${this.pricesArray[i].percent}</td>
+        <td>${this.pricesArray[i].supply}</td>
         <td><a href="${this.pricesArray[i].explorerUrl}" target="_blank">Explorer</a></td>
       </tr>
      `
